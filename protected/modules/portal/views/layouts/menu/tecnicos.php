@@ -1,0 +1,1 @@
+<?php $this->renderPartial('/layouts/menu/admin'); ?>

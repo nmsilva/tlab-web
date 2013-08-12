@@ -1,0 +1,344 @@
+/* 
+3D Link Button
+Author: tecWeb 2012
+*/
+
+/* --- Default CSS --- */
+.link-button{
+	float:left;
+	margin:0 0 20px 0;
+	min-width:40px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+        font-weight: bold;
+	text-decoration:none;
+	position:relative;
+	padding:3px 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.link-button:hover{
+    text-decoration: none;
+}
+.link-button:active{
+    top:3px;
+}
+
+.arrow::before{
+    background-image:url('../imgs/right_arrow.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.round{
+    padding-right:50px;
+}
+.round::before {
+	content:"";
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:15px;
+	top:50%;
+	margin-top:-9px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+.round:active::before{
+    top:50%;
+    margin-top:-12px;
+}
+
+.square{
+    padding-right:50px;
+}
+.square::before {
+	content:"";
+	width:25px;
+	height:25px;
+	position:absolute;
+	right:10px;
+	top:40%;
+	margin-top:-9px;
+	-webkit-border-radius: 20%;
+	-moz-border-radius: 20%;
+	-o-border-radius: 20%;
+	border-radius: 20%;
+}
+.square:active::before{
+    top:40%;
+    margin-top:-12px;
+}
+
+
+/********************************************************/
+/*  COLOR THEMES FOR BUTTON */
+/********************************************************/
+
+/* --- Grey Color Theme --- */
+.grey{
+    color:#333 !important;
+    background-image: linear-gradient(bottom, rgb(206,206,206) 0%, rgb(241,241,241) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(206,206,206) 0%, rgb(241,241,241) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(206,206,206) 0%, rgb(241,241,241) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(206,206,206) 0%, rgb(241,241,241) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(206,206,206) 0%, rgb(241,241,241) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(206,206,206)),color-stop(1, rgb(241,241,241)));
+    
+    -webkit-box-shadow: inset 0px 1px 0px #b2b2b2, 0px 5px 0px 0px #7f7f7f, 0px 5px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #b2b2b2, 0px 5px 0px 0px #7f7f7f, 0px 5px 5px #999;
+    -o-box-shadow: inset 0px 1px 0px #b2b2b2, 0px 5px 0px 0px #7f7f7f, 0px 5px 5px #999;
+    box-shadow: inset 0px 1px 0px #b2b2b2, 0px 5px 0px 0px #7f7f7f, 0px 5px 5px #999;
+}
+.grey:hover{color:#333 !important;}
+.grey:before{
+    background-color:#b2b2b2;
+    -webkit-box-shadow: inset 0px 1px 0px #999, 0px 1px 0px #fff;
+    -moz-box-shadow: inset 0px 1px 0px #999, 0px 1px 0px #fff;
+    -o-box-shadow: inset 0px 1px 0px #999, 0px 1px 0px #fff;
+    box-shadow: inset 0px 1px 0px #999, 0px 1px 0px #fff;
+}
+.grey:active{
+    background-image: linear-gradient(bottom, rgb(241,241,241) 0%, rgb(206,206,206) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(241,241,241) 0%, rgb(206,206,206) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(241,241,241) 0%, rgb(206,206,206) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(241,241,241) 0%, rgb(206,206,206) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(241,241,241) 0%, rgb(206,206,206) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(241,241,241)),color-stop(1, rgb(206,206,206)));
+
+    -webkit-box-shadow: inset 0px 1px 0px #b2b2b2, 0px 2px 0px 0px #717171, 0px 5px 3px #999;
+    -moz-box-shadow: inset 0px 1px 0px #b2b2b2, 0px 2px 0px 0px #717171, 0px 5px 3px #999;
+    -o-box-shadow: inset 0px 1px 0px #b2b2b2, 0px 2px 0px 0px #717171, 0px 5px 3px #999;
+    box-shadow: inset 0px 1px 0px #b2b2b2, 0px 2px 0px 0px #717171, 0px 5px 3px #999;    
+    color:#fff;
+}
+.grey:active::before {
+    -webkit-box-shadow: inset 0px 1px 0px #fff, 0px 3px 0px #333, 0px 6px 3px #b2b2b2;
+    -moz-box-shadow: inset 0px 1px 0px #fff, 0px 3px 0px #333, 0px 6px 3px #b2b2b2;
+    -o-box-shadow: inset 0px 1px 0px #fff, 0px 3px 0px #333, 0px 6px 3px #b2b2b2;
+    box-shadow: inset 0px 1px 0px #fff, 0px 3px 0px #333, 0px 6px 3px #b2b2b2;
+}
+
+/* --- Green Color Theme --- */
+.green{
+    color:#fff !important;
+    background-image: linear-gradient(bottom, rgb(134,199,11) 0%, rgb(161,240,10) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(134,199,11) 0%, rgb(161,240,10) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(134,199,11) 0%, rgb(161,240,10) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(134,199,11) 0%, rgb(161,240,10) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(134,199,11) 0%, rgb(161,240,10) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(134,199,11)),color-stop(1, rgb(161,240,10)));
+
+    -webkit-box-shadow: inset 0px 1px 0px #86c70b, 0px 5px 0px 0px #639800, 0px 5px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #86c70b, 0px 5px 0px 0px #639800, 0px 5px 5px #999;
+    -o-box-shadow: inset 0px 1px 0px #86c70b, 0px 5px 0px 0px #639800, 0px 5px 5px #999;
+    box-shadow: inset 0px 1px 0px #86c70b, 0px 5px 0px 0px #639800, 0px 5px 5px #999;
+}
+.green:hover{color:#436700 !important;}
+.green:active {
+	background-image: linear-gradient(bottom, rgb(161,240,10) 0%, rgb(134,199,11) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(161,240,10) 0%, rgb(134,199,11) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(161,240,10) 0%, rgb(134,199,11) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(161,240,10) 0%, rgb(134,199,11) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(161,240,10) 0%, rgb(134,199,11) 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(161,240,10)),color-stop(1, rgb(134,199,11)));
+        
+	-webkit-box-shadow: inset 0px 1px 0px #86c70b, 0px 2px 0px 0px #639800, 0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #86c70b, 0px 2px 0px 0px #639800, 0px 5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #86c70b, 0px 2px 0px 0px #639800, 0px 5px 3px #999;
+	box-shadow: inset 0px 1px 0px #86c70b, 0px 2px 0px 0px #639800, 0px 5px 3px #999;
+	color:#fff;
+}
+.green:before{
+    background-color:#72ae00;
+    -webkit-box-shadow: inset 0px 1px 0px #436700, 0px 1px 0px #a7ff00;
+    -moz-box-shadow: inset 0px 1px 0px #436700, 0px 1px 0px #a7ff00;
+    -o-box-shadow: inset 0px 1px 0px #436700, 0px 1px 0px #a7ff00;
+    box-shadow: inset 0px 1px 0px #436700, 0px 1px 0px #a7ff00;
+}
+.green:active::before {
+	-webkit-box-shadow: inset 0px 1px 0px #a7ff00, 0px 3px 0px #436700, 0px 6px 3px #5a8a00;
+	-moz-box-shadow: inset 0px 1px 0px #a7ff00, 0px 3px 0px #436700, 0px 6px 3px #5a8a00;
+	-o-box-shadow: inset 0px 1px 0px #a7ff00, 0px 3px 0px #436700, 0px 6px 3px #5a8a00;
+	box-shadow: inset 0px 1px 0px #a7ff00, 0px 3px 0px #436700, 0px 6px 3px #5a8a00;
+}
+
+/* --- Blue Color Theme --- */
+.blue{
+    color:#fff !important;
+    background-image: linear-gradient(bottom, rgb(52,120,205) 0%, rgb(78,166,230) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(52,120,205) 0%, rgb(78,166,230) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(52,120,205) 0%, rgb(78,166,230) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(52,120,205) 0%, rgb(78,166,230) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(52,120,205) 0%, rgb(78,166,230) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(52,120,205)),color-stop(1, rgb(78,166,230)));
+
+    -webkit-box-shadow: inset 0px 1px 0px #4485AF, 0px 5px 0px 0px #1a6ca0, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #4485AF, 0px 5px 0px 0px #1a6ca0, 0px 10px 5px #999;
+    -o-box-shadow: inset 0px 1px 0px #4485AF, 0px 5px 0px 0px #1a6ca0, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #4485AF, 0px 5px 0px 0px #1a6ca0, 0px 10px 5px #999;
+}
+.blue:hover{color:#333 !important;}
+.blue:active {
+	background-image: linear-gradient(bottom, rgb(78,166,230) 0%, rgb(52,120,205) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(78,166,230) 0%, rgb(52,120,205) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(78,166,230) 0%, rgb(52,120,205) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(78,166,230) 0%, rgb(52,120,205) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(78,166,230) 0%, rgb(52,120,205) 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(78,166,230)),color-stop(1, rgb(52,120,205)));
+        
+	-webkit-box-shadow: inset 0px 1px 0px #4485AF, 0px 2px 0px 0px #296388, 0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #4485AF, 0px 2px 0px 0px #296388, 0px 5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #4485AF, 0px 2px 0px 0px #296388, 0px 5px 3px #999;
+	box-shadow: inset 0px 1px 0px #4485AF, 0px 2px 0px 0px #296388, 0px 5px 3px #999;
+	color:#fff;
+}
+.blue:before{
+    background-color:#4485AF;
+    -webkit-box-shadow: inset 0px 1px 0px #296388, 0px 2px 0px 0px #499EE1, 0px 5px 3px #377ED0;
+    -moz-box-shadow: inset 0px 1px 0px #296388, 0px 2px 0px 0px #499EE1, 0px 5px 3px #377ED0;
+    -o-box-shadow: inset 0px 1px 0px #296388, 0px 2px 0px 0px #499EE1, 0px 5px 3px #377ED0;
+    box-shadow: inset 0px 1px 0px #296388, 0px 2px 0px 0px #499EE1, 0px 5px 3px #377ED0;
+}
+.blue:active::before {
+    -webkit-box-shadow: inset 0px 1px 0px #499EE1, 0px 3px 0px #296388, 0px 6px 3px #377ED0;
+    -moz-box-shadow: inset 0px 1px 0px #499EE1, 0px 3px 0px #296388, 0px 6px 3px #377ED0;
+    -o-box-shadow: inset 0px 1px 0px #499EE1, 0px 3px 0px #296388, 0px 6px 3px #377ED0;
+    box-shadow: inset 0px 1px 0px #499EE1, 0px 3px 0px #296388, 0px 6px 3px #377ED0;
+}
+
+/* --- Orange Color Theme --- */
+.orange{
+    color:#fff !important;
+    background-image: linear-gradient(bottom, rgb(214,111,19) 0%, rgb(243,174,34) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(214,111,19) 0%, rgb(243,174,34) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(214,111,19) 0%, rgb(243,174,34) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(214,111,19) 0%, rgb(243,174,34) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(214,111,19) 0%, rgb(243,174,34) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(214,111,19)),color-stop(1, rgb(243,174,34)));
+
+    -webkit-box-shadow: inset 0px 1px 0px #D67013, 0px 5px 0px 0px #98571c, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #D67013, 0px 5px 0px 0px #98571c, 0px 10px 5px #999;
+    -o-box-shadow: inset 0px 1px 0px #D67013, 0px 5px 0px 0px #98571c, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #D67013, 0px 5px 0px 0px #98571c, 0px 10px 5px #999;
+}
+.orange:hover{color:#333 !important;}
+.orange:active {
+	background-image: linear-gradient(bottom, rgb(243,174,34) 0%, rgb(214,111,19) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(243,174,34) 0%, rgb(214,111,19) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(243,174,34) 0%, rgb(214,111,19) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(243,174,34) 0%, rgb(214,111,19) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(243,174,34) 0%, rgb(214,111,19) 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(243,174,34)),color-stop(1, rgb(214,111,19)));
+        
+	-webkit-box-shadow: inset 0px 1px 0px #D67013, 0px 2px 0px 0px #98571c, 0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #D67013, 0px 2px 0px 0px #98571c, 0px 5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #D67013, 0px 2px 0px 0px #98571c, 0px 5px 3px #999;
+	box-shadow: inset 0px 1px 0px #D67013, 0px 2px 0px 0px #98571c, 0px 5px 3px #999;
+	color:#fff;
+}
+.orange:before{
+    background-color:#E08518;
+    -webkit-box-shadow: inset 0px 1px 0px #a65d19, 0px 2px 0px 0px #F1AA21, 0px 5px 3px #E08518;
+    -moz-box-shadow: inset 0px 1px 0px #a65d19, 0px 2px 0px 0px #F1AA21, 0px 5px 3px #E08518;
+    -o-box-shadow: inset 0px 1px 0px #a65d19, 0px 2px 0px 0px #F1AA21, 0px 5px 3px #E08518;
+    box-shadow: inset 0px 1px 0px #a65d19, 0px 2px 0px 0px #F1AA21, 0px 5px 3px #E08518;
+}
+.orange:active::before {
+    -webkit-box-shadow: inset 0px 1px 0px #F1AA21, 0px 3px 0px #a65d19, 0px 6px 3px #E08518;
+    -moz-box-shadow: inset 0px 1px 0px #F1AA21, 0px 3px 0px #a65d19, 0px 6px 3px #E08518;
+    -o-box-shadow: inset 0px 1px 0px #F1AA21, 0px 3px 0px #a65d19, 0px 6px 3px #E08518;
+    box-shadow: inset 0px 1px 0px #F1AA21, 0px 3px 0px #a65d19, 0px 6px 3px #E08518;
+}
+
+/* --- Red Color Theme --- */
+.red{
+    color:#fff !important;
+    background-image: linear-gradient(bottom, rgb(207,62,57) 0%, rgb(252,140,103) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(207,62,57) 0%, rgb(252,140,103) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(207,62,57) 0%, rgb(252,140,103) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(207,62,57) 0%, rgb(252,140,103) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(207,62,57) 0%, rgb(252,140,103) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(207,62,57)),color-stop(1, rgb(252,140,103)));
+
+    -webkit-box-shadow: inset 0px 1px 0px #D3463E, 0px 5px 0px 0px #862924, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #D3463E, 0px 5px 0px 0px #862924, 0px 10px 5px #999;
+    -o-box-shadow: inset 0px 1px 0px #D3463E, 0px 5px 0px 0px #862924, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #D3463E, 0px 5px 0px 0px #862924, 0px 10px 5px #999;
+}
+.red:hover{color:#333 !important;}
+.red:active {
+	background-image: linear-gradient(bottom, rgb(252,140,103) 0%, rgb(207,62,57) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(252,140,103) 0%, rgb(207,62,57) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(252,140,103) 0%, rgb(207,62,57) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(252,140,103) 0%, rgb(207,62,57) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(252,140,103) 0%, rgb(207,62,57) 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(252,140,103)),color-stop(1, rgb(207,62,57)));
+        
+	-webkit-box-shadow: inset 0px 1px 0px #D3463E, 0px 2px 0px 0px #862924, 0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #D3463E, 0px 2px 0px 0px #862924, 0px 5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #D3463E, 0px 2px 0px 0px #862924, 0px 5px 3px #999;
+	box-shadow: inset 0px 1px 0px #D3463E, 0px 2px 0px 0px #862924, 0px 5px 3px #999;
+	color:#fff;
+}
+.red:before{
+    background-color:#D3463E;
+    -webkit-box-shadow: inset 0px 1px 0px #862924, 0px 2px 0px 0px #F68261, 0px 5px 3px #D3463E;
+    -moz-box-shadow: inset 0px 1px 0px #862924, 0px 2px 0px 0px #F68261, 0px 5px 3px #D3463E;
+    -o-box-shadow: inset 0px 1px 0px #862924, 0px 2px 0px 0px #F68261, 0px 5px 3px #D3463E;
+    box-shadow: inset 0px 1px 0px #862924, 0px 2px 0px 0px #F68261, 0px 5px 3px #D3463E;
+}
+.red:active::before {
+    -webkit-box-shadow: inset 0px 1px 0px #F68261, 0px 3px 0px #862924, 0px 6px 3px #D3463E;
+    -moz-box-shadow: inset 0px 1px 0px #F68261, 0px 3px 0px #862924, 0px 6px 3px #D3463E;
+    -o-box-shadow: inset 0px 1px 0px #F68261, 0px 3px 0px #862924, 0px 6px 3px #D3463E;
+    box-shadow: inset 0px 1px 0px #F68261, 0px 3px 0px #862924, 0px 6px 3px #D3463E;
+}
+
+/* --- Black Color Theme --- */
+.black{
+    color:#fff !important;
+    background-image: linear-gradient(bottom, rgb(59,59,59) 0%, rgb(125,125,125) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(59,59,59) 0%, rgb(125,125,125) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(59,59,59) 0%, rgb(125,125,125) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(59,59,59) 0%, rgb(125,125,125) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(59,59,59) 0%, rgb(125,125,125) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(59,59,59)),color-stop(1, rgb(125,125,125)));
+
+    -webkit-box-shadow: inset 0px 1px 0px #515151, 0px 5px 0px 0px #242424, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #515151, 0px 5px 0px 0px #242424, 0px 10px 5px #999;
+    -o-box-shadow: inset 0px 1px 0px #515151, 0px 5px 0px 0px #242424, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #515151, 0px 5px 0px 0px #242424, 0px 10px 5px #999;
+}
+.black:hover{color:#ccc !important;}
+.black:active {
+	background-image: linear-gradient(bottom, rgb(125,125,125) 0%, rgb(59,59,59) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(125,125,125) 0%, rgb(59,59,59) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(125,125,125) 0%, rgb(59,59,59) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(125,125,125) 0%, rgb(59,59,59) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(125,125,125) 0%, rgb(59,59,59) 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(125,125,125)),color-stop(1, rgb(59,59,59)));
+        
+	-webkit-box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #242424, 0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #242424, 0px 5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #242424, 0px 5px 3px #999;
+	box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #242424, 0px 5px 3px #999;
+	color:#fff;
+}
+.black:before{
+    background-color:#656565;
+    -webkit-box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #737373, 0px 5px 3px #4B4B4B;
+    -moz-box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #737373, 0px 5px 3px #4B4B4B;
+    -o-box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #737373, 0px 5px 3px #4B4B4B;
+    box-shadow: inset 0px 1px 0px #515151, 0px 2px 0px 0px #737373, 0px 5px 3px #4B4B4B;
+}
+.black:active::before {
+    -webkit-box-shadow: inset 0px 1px 0px #737373, 0px 3px 0px #242424, 0px 6px 3px #4B4B4B;
+    -moz-box-shadow: inset 0px 1px 0px #737373, 0px 3px 0px #242424, 0px 6px 3px #4B4B4B;
+    -o-box-shadow: inset 0px 1px 0px #737373, 0px 3px 0px #242424, 0px 6px 3px #4B4B4B;
+    box-shadow: inset 0px 1px 0px #737373, 0px 3px 0px #242424, 0px 6px 3px #4B4B4B;
+}
